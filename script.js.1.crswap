@@ -1,0 +1,70 @@
+const storyElement = document.getElementById('story');
+const choicesElement = document.getElementById('choices');
+
+const scenes = {
+    start: {
+        text: "Você está em uma casa escura. À sua frente há dois caminhos: um para a esquerda e outro para a direita. Para onde você vai?",
+        choices: [
+            { text: "Ir para a esquerda", nextScene: "leftPath" },
+            { text: "Ir para a direita", nextScene: "rightPath" }
+        ]
+    },
+    leftPath: {
+        text: "Você seguiu o caminho da esquerda e encontrou uma bruxa tenebrosa. Você decide entrar na cabana ou continuar explorando a casa.",
+        choices: [
+            { text: "falar com a bruxa", nextScene: "cabin" },
+            { text: "Continuar explorando", nextScene: "explore" }
+        ]
+    },
+    rightPath: {
+        text: "Você seguiu o caminho da direita e encontrou uma trilha. Você decide atravessar a trilha ou voltar.",
+        choices: [
+            { text: "Atravessar a trilha", nextScene: "river" },
+            { text: "Voltar", nextScene: "start" }
+        ]
+    },
+    cabin: {
+        text: ", você encontra um velho sábio que lhe dá um mapa do tesouro. Parabéns, você encontrou um item valioso!",
+        choices: [
+            { text: "Voltar para a floresta", nextScene: "start" }
+        ]
+    },
+    explore: {
+        text: "Enquanto explora a floresta, você encontra um grupo de aventureiros. Eles te convidam para uma jornada épica. O que você faz?",
+        choices: [
+            { text: "Aceitar a jornada", nextScene: "journey" },
+            { text: "Recusar e voltar para casa", nextScene: "home" }
+        ]
+    },
+    river: {
+        text: "Ao atravessar o rio, você encontra um tesouro escondido! Parabéns, você encontrou um tesouro!",
+        choices: [
+            { text: "Voltar para a floresta", nextScene: "start" }
+        ]
+    },
+    journey: {
+        text: "Você se junta aos aventureiros e vive grandes aventuras. Fim do jogo!",
+        choices: []
+    },
+    home: {
+        text: "Você volta para casa e vive uma vida tranquila. Fim do jogo!",
+        choices: []
+    }
+};
+
+function showScene(scene) {
+    const currentScene = scenes[scene];
+    storyElement.textContent = currentScene.text;
+    choicesElement.innerHTML = '';
+
+    currentScene.choices.forEach(choice => {
+        const button = document.createElement('button');
+        button.textContent = choice.text;
+        button.className = 'choice-button';
+        button.addEventListener('click', () => showScene(choice.nextScene));
+        choicesElement.appendChild(button);
+    });
+}
+
+// Start the game
+showScene('start');

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+    <title>Aventura Espacial</title>
+</head>
+<body>
+    <main>
+        <div>
+            <h1>Missão em Marte</h1>
+        </div>
+        <div class="passo ativo" id="passo-0">
+            <img src="foguete.avif" alt="">
+            <p>Você é um astronauta em uma missão para explorar um planeta desconhecido. Ao pousar, você percebe algo estranho. Um som vem de uma caverna próxima.</p>
+            <button class="btn-proximo" data-proximo="1">Investigar a caverna</button>
+            <button class="btn-proximo" data-proximo="2">Voltar para a nave</button>
+        </div>
+        <div class="passo" id="passo-1">
+            <img src="alienigina.jpg" alt="">
+            <p>Você entra na caverna e encontra uma estranha criatura alienigena. Ela parece amigável, mas você não entende sua linguagem.</p>
+            <button class="btn-proximo" data-proximo="3">Tentar se comunicar</button>
+            <button class="btn-proximo" data-proximo="4">Fugir da caverna</button>
+        </div>
+        <div class="passo" id="passo-2">
+            <img src="cidade.jpg" alt="">
+            <p>Você decide voltar para a nave, mas ao chegar, descobre que ela está cercada por alienigenas hostis. O que você faz?</p>
+            <button class="btn-proximo" data-proximo="5">Lutas contra os alienigenas</button>
+            <button class="btn-proximo" data-proximo="8">Tentar negociar com eles</button>
+        </div>
+        <div class="passo" id="passo-3">
+            <img src="alienigina.jpg" alt="">
+            <p>Você tenta se comunicar com a criatura, e ela responde com gestos. Parece que quer te mostrar algo.</p>
+            <button class="btn-proximo" data-proximo="7">Seguir a criatura</button>
+            <button class="btn-proximo" data-proximo="2">Sair da caverna</button>
+        </div>
+
+        <div class="passo" id="passo-4">
+            <img src="eclipse.jpg" alt="">
+            <p>Você foge da caverna, mas uma tempestade começa. O que você faz?</p>
+                <button class="btn-proximo" data-proximo="5">Buscar abrigos</button>
+                <button class="btn-proximo" data-proximo="2">Tentar voltar para a nave</button>
+        </div>
+
+        <div class="passo" id="passo-5">
+            <img src="alienigenas.jpeg" alt="">
+        <p>Você decide lutar, mas os alienigenas são muitos. Eles te capturam. VOCÊ PERDEU!</p>
+            <button class="btn-proximo" data-proximo="1">Tentar novamente</button>
+        </div>
+
+        <div class="passo" id="passo-6">
+            <img src="cite.jpeg" alt="">
+            <p>Você tenta negociar com eles, e eles te permitem ir embora, mas pedem para nunca mais voltar ao planeta.</p>
+            <button class="btn-proximo" data-proximo="1">Tentar novamente</button>
+        </div>
+
+        <div class="passo" id="passo-7">
+            <img src="alienigenas.jpeg" alt="">
+            <p>A criatura te leva a uma sala cheia de tecnologia avançada. Parece ser uma espécie de laboratório. Você descobre um dispositivo que pode te levar de volta para a Terra.</p>
+            <button class="btn-proximo" data-proximo="1">Tentar novamente</button>
+        </div>
+
+        <div class="passo" id="passo-8">
+            <img src="eclipse.jpeg" alt="">
+            <p>Você encontra abrigo em uma caverna próxima. Quando a tempestade passa, você decide explorar o planeta. Sua aventura continua...</p>
+            <button class="btn-proximo" data-proximo="10">VocÊ consegue</button>
+        </div>
+
+        <div class="passo" id="passo-9">
+            <img src="cite.jpeg" alt="">
+            <p>Você tenta voltar para a nave, mas se perde no caminho. Você nunca é encontrado. FIM DE JOGO</p>
+            <button class="btn-proximo" data-proximo="1">tentar de novo</button>
+        </div>
+
+        <div class="passo" id="passo-10">
+            <img src="cite.jpeg" alt="">
+            <p>Ao seguir a criatura, ela te mostra um mapa do planeta. Existem dois locais destacados: uma cidade subterranea e uma montanha misteriosa</p>
+            <button class="btn-proximo" data-proximo="12">Ir para a cidade subterranea</button>
+            <button class="btn-proximo" data-proximo="3">Explorar a montanha</button>
+        </div>
+
+        <div class="passo" id="passo-11">
+            <img src="alienigenas.jpeg" alt="">
+            <p> Na cidade subterranea, você encontra uma civilização alienigena avançada. Eles te oferecem a chance de aprender seus segredos ou voltar para a Terra com novas tecnologias. O que você escolhe?</p>
+            <button class="btn-proximo" data-proximo="12">voltar para a Terra</button>
+            <button class="btn-proximo" data-proximo="5">ir com eles</button>
+        </div>
+
+        <div class="passo" id="passo-12">
+            <img src="eclipse.jpg" alt="">
+            <p>Na montanha misteriosa, você encontra um portal interdimensional. Ao entrar, você é transportado para uma dimensão. Você venceu.</p>kj
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

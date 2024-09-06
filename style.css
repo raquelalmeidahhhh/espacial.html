@@ -1,0 +1,41 @@
+body {
+    background-color: #5f4efa;
+    color: white;
+    font-family: "Protest Guerrilla", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 700px;
+    margin: 0;
+}
+
+button {
+    background-color: #470068;
+    color: white;
+    
+  font-family: "Abel", system-ui;
+
+}
+
+.passo {
+    display: none;
+}
+
+.passo.ativo {
+    display:block;
+}
+
+main {
+    text-align: center;
+    max-width: 90%;
+}
+
+img {
+    max-width : 90%;
+    border: solid 4px rgb(1, 1, 61);
+}
+
+h1{
+    padding: 40px;
+    border-bottom: solid 4px rgb(1, 1, 61);
+}
